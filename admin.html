@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>KRIN STUDIO | Admin</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="admin.css"></head>
+<body class="admin-body"><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KRIN <b>STUDIO</b><small>ADMIN DASHBOARD</small></span></a><nav><a href="index.html">View website ↗</a></nav></header>
+<main class="admin-main"><div class="admin-heading"><div><p class="eyebrow">STUDIO CONTROL PANEL</p><h1>Admin <em>dashboard</em></h1><p>Manage gallery, promotional video and payment requests.</p></div><span class="demo-label">FRONT-END DEMO</span></div>
+<section class="admin-panel" id="loginPanel"><h2>Admin sign in</h2><p class="muted">Demo password: <b>krin123</b>. Change this before any real deployment.</p><form id="loginForm"><label>Password<input type="password" id="adminPassword" required placeholder="Enter admin password"></label><button class="primary-btn">Sign in ↗</button><p class="error" id="loginError"></p></form></section>
+<div id="dashboard" class="hidden">
+<div class="admin-grid">
+<section class="admin-panel"><h2>Upload photos</h2><p class="muted">Choose original image files. The website stores the selected file without resizing or compressing it.</p><form id="photoForm"><label>Photo title<input id="photoTitle" required placeholder="e.g. Wedding collection 01"></label><label>Choose photo<input type="file" id="photoFile" accept="image/*" required></label><button class="primary-btn">Upload photo</button><p class="success" id="photoMessage"></p></form></section>
+<section class="admin-panel"><h2>Promotional video</h2><p class="muted">Upload a short MP4 video for the home page. Large videos may exceed browser storage limits.</p><form id="videoForm"><label>Choose video<input type="file" id="videoFile" accept="video/mp4,video/webm" required></label><button class="primary-btn">Save video</button><p class="success" id="videoMessage"></p></form></section>
+</div>
+<section class="admin-panel"><div class="panel-title"><div><h2>Payment requests</h2><p class="muted">Check the transaction in your Mobile Money account before confirming.</p></div><button class="outline-btn" id="refreshRequests">Refresh</button></div><div id="requestsList"></div></section>
+<section class="admin-panel"><h2>Photo library</h2><div id="adminPhotos"></div></section>
+</div></main><script src="admin.js"></script></body></html>
